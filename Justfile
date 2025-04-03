@@ -207,6 +207,7 @@ _build-bib $target_image $tag $type $config: (_rootful_load_image target_image t
       -v $BUILDTMP:/output \
       -v /var/lib/containers/storage:/var/lib/containers/storage \
       "${bib_image}" \
+      --rootfs btrfs \
       ${args} \
       "${target_image}:${tag}"
 
