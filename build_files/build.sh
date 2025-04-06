@@ -10,7 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 group install -y kde-desktop-environment 
+dnf5 group install -y kde-desktop
+# Remove some packages later, need to see how tulip does ti
+# dnf5 remove kwrite filelight kfind
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
